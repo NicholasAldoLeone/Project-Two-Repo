@@ -36,6 +36,15 @@ module.exports = function(sequelize, DataTypes) {
         total_stock: {
             type: DataTypes.INTEGER,
             
+        },
+
+        product_reviews: {
+            type: DataTypes.STRING,
+            allowNull: false,
+
+            validate: {
+                len: [1, 255]
+            }
         }
     })
     return Product;
