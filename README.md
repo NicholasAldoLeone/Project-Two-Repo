@@ -24,6 +24,8 @@ Create schema and seeds for the database
 
 Create Handlebars files
 
+Create AWS S3 Package
+
 Crate Different Handlebars Views
 
 Create Models for What Will be Stored in Database
