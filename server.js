@@ -32,8 +32,9 @@ require("./routes/admin-api-routes")(app);
 var routes = require("./controllers/viewsController.js");
 app.use(routes);
 
-db.sequelize.sync().then(function () {
-    app.listen(PORT, function () {
-        console.log("App listening on PORT http://localhost:" + PORT);
-    });
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT http://localhost:" + PORT);
+  });
 });
+
