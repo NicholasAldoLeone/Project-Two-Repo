@@ -4,27 +4,31 @@
         <p class="lead">Please Update or Add Products Below</p>
         <form>
             <div class="form-group col-md-4">
-                <label for="productName">Product Name</label>
-                <input type="text" class="form-control" id="productName" placeholder="Enter Products Name">
+                <label for="product_name">Product Name</label>
+                <input type="text" class="form-control" id="product_name" placeholder="Enter Products Name">
             </div>
             <div class="form-group col-md-4">
-                <label for="productPrice">Product Price</label>
-                <input type="number" class="form-control" id="productPrice" placeholder="Enter Cost Per Item">
+                <label for="product_cost">Product Price</label>
+                <input type="number" class="form-control" id="product_cost" placeholder="Enter Cost Per product">
             </div>
             <div class="form-group col-md-4">
-                <label for="totalItemStock">Total Stock</label>
-                <input type="number" class="form-control" id="productStock" placeholder="Enter Total Amount">
+                <label for="total_stock">Total Stock</label>
+                <input type="number" class="form-control" id="total_stock" placeholder="Enter Total Amount">
             </div>
-            <div class="form-group col-md-4">
-                <label for="totalItemStock">Product Image</label>
-                <input type="image" class="form-control" id="productImage" placeholder="Upload Image">
-            </div>
+            <form method="post" action="" enctype="multipart/form-data" id="myform">
+                <div class="preview">
+                    <img src="" id="img" width="100" height="100" />
+                </div>
+                <div>
+                    <input type="file" id="file" name="file" />
+                </div>
+            </form>
             <div class="form-group col-md-6">
-                <label for="itemDescription">Description</label>
-                <textarea class="form-control" id="itemDescription" rows="3"></textarea>
+                <label for="product_description">Description</label>
+                <textarea class="form-control" id="product_description" rows="3"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Add Item</button>
-            <button type="submit" class="btn btn-primary">Update Item(s)</button>
+            <button type="submit" class="btn btn-primary" id="add-product">Add product</button>
+            <button type="submit" class="btn btn-primary" id="update-product">Update product(s)</button>
         </form>
     </div>
 </div>
@@ -42,13 +46,13 @@
     <tbody>
         {{#each products}}
         <tr>
-
-            <td>{{this.id}}</td>
-            <td>{{this.product_name}}</td>
-            <td>{{this.department}}</td>
-            <td>{{this.product_price}}</td>
-            <td>{{this.stock}}</td>
+            <td>{{id}}</td>
+            <td>{{product_name}}</td>
+            <td>{{product_department}}</td>
+            <td>${{product_cost}}</td>
+            <td>{{total_stock}}</td>
         </tr>
         {{/each}}
     </tbody>
 </table>
+

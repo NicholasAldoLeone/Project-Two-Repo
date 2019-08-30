@@ -11,10 +11,10 @@ module.exports = function(sequelize, DataTypes) {
 
         product_department: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
 
             validate: {
-                len: [1, 255]
+                len: [0, 255]
             }
         },
 
@@ -29,6 +29,12 @@ module.exports = function(sequelize, DataTypes) {
 
         product_cost: {
             type: DataTypes.INTEGER,
+            allowNull: true
+
+        },
+
+        product_image: {
+            type: DataTypes.STRING,
             allowNull: true
 
         },
