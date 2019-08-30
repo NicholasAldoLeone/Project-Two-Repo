@@ -1,3 +1,4 @@
+require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
 
@@ -21,13 +22,6 @@ require("./routes/product-api-routes.js")(app);
 require("./routes/account-api-routes")(app);
 require("./routes/admin-api-routes")(app);
 
-<<<<<<< HEAD
-
-db.sequelize.sync().then(function () {
-    app.listen(PORT, function () {
-        console.log("App listening on PORT http://localhost:" + PORT);
-    });
-=======
 var routes = require("./controllers/viewsController.js");
 app.use(routes);
 
@@ -35,7 +29,6 @@ db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT http://localhost:" + PORT);
   });
->>>>>>> 3c5526175efca9937522a5b0fc9d08327a16e968
 });
 
 
