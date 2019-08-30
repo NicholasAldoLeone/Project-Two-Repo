@@ -20,8 +20,7 @@ require("./routes/account-api-routes")(app);
 require("./routes/admin-api-routes")(app);
 
 var routes = require("./controllers/viewsController.js");
-
-app.use(routes)
+app.use(routes);
 
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
