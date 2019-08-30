@@ -5,7 +5,8 @@ $("#add-btn").on("click", function (event) {
         product_name: $("#name").val().trim(),
         product_department: $("#department").val().trim(),
         product_cost: $("#cost").val().trim(),
-        product_description: $("#description").val().trim()
+        product_description: $("#description").val().trim(),
+        product_reviews: $("#reviews").val().trim()
 
     }
 

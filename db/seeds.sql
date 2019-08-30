@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
  INSERT INTO sellers (seller_name) VALUES ('Hunter'),('David'),('Nick')
 
 
@@ -26,3 +27,5 @@ INSERT INTO products (product_name, product_department, product_description, pro
 
 INSERT INTO products (product_name, product_department, product_description, product_cost) VALUES ("Chair", "Furniture", "This Chair is so comfortable that not even a fire could wake you up", 100);
 >>>>>>> f9043f21bd0628927a3e12b045e8e1a275e87b2b
+=======
+>>>>>>> 3c5526175efca9937522a5b0fc9d08327a16e968
