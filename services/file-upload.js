@@ -9,7 +9,6 @@ aws.config.update({
     region: 'AWS-REGION'
 })
 
- 
 const s3 = new aws.S3() 
  
 const upload = multer({
