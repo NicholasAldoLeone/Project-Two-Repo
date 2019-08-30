@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CREATE DATABASE prime_purchase_db;
 
 USE prime_purchase_db;
@@ -21,3 +22,8 @@ CREATE TABLE products
 	PRIMARY KEY (id),
 	FOREIGN KEY (seller_id) REFERENCES seller(id)
 );
+=======
+CREATE DATABASE "Prime_Purchase_db";
+
+USE "Prime_Purchase_db";
+>>>>>>> f9043f21bd0628927a3e12b045e8e1a275e87b2b
