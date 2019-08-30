@@ -1,0 +1,30 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Prime Purchase</h1>
+        <p class="lead">Please find all of our Preeminent Products Below!</p>
+    </div>
+</div>
+<br>
+<br>
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Department</th>
+            <th scope="col">Product Price</th>
+            <th scope="col">Amount in Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each products}}
+        <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.product_name}}</td>
+            <td>{{this.department}}</td>
+            <td>{{this.product_price}}</td>
+            <td>{{this.stock}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
