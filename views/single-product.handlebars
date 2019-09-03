@@ -1,7 +1,7 @@
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
         <h1 class="display-4">Prime Purchase</h1>
-        <p class="lead">Please Review {{data.product.product_name}} Below!</p>
+        <p class="lead">Please Review {{products.product_name}} Below!</p>
     </div>
 </div>
 <br>
@@ -9,16 +9,16 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-2 col-md-2">
-            <img src="/" alt="" class="img-rounded img-responsive" />
+            <img src="{{products.product_image}}" alt="" class="img-rounded img-responsive" />
         </div>
         <div class="col-sm-4 col-md-4">
             <blockquote>
-                <p>{{data.product.product_name}}</p>
+                <p>{{products.product_name}}</p>
             </blockquote>
-            <p> {{data.price}}
-                <br/> {{data.product.department}}
-                <br/> {{data.product.product_stock}}
-                <br/> {{data.product.product_description}}</p>
+            <p> {{products.product_cost}}
+                <br /> {{products.product_department}}
+                <br /> {{products.total_stock}}
+                <br /> {{products.product_description}}</p>
         </div>
     </div>
 </div>
@@ -31,24 +31,28 @@
                     Comment panel
                 </div>
                 <div class="panel-body">
-                    <textarea class="form-control" placeholder="write a review..." rows="3"></textarea>
+                    <textarea class="form-control" placeholder="write a review..." rows="3" id="review-text"></textarea>
                     <br>
-                    <button type="button" class="btn btn-info pull-right">Post</button>
+                    <button type="button" class="btn btn-info pull-right" id="post-btn"
+                        value={{products.id}}>Post</button>
                     <div class="clearfix"></div>
                     <hr>
                     <ul class="media-list">
+                        {{#each reviews}}
                         <li class="media">
                             <div class="media-body">
                                 <span class="text-muted pull-right">
-                                    <small class="text-muted">{{data.comment.created_on}}</small>
+                                    <small class="text-muted">{{created_on}}</small>
                                 </span>
-                                <strong class="text-success">{{data.comment.user}}</strong>
+                                <strong class="text-success">{{title}}</strong>
                                 <p>
-                                {{data.comment.comment_text}}
+                                    {{body}}
                                 </p>
                             </div>
                         </li>
+                        {{/each}}
                     </ul>
+
                 </div>
             </div>
         </div>

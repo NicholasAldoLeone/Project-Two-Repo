@@ -11,10 +11,10 @@ module.exports = function(sequelize, DataTypes) {
 
         product_department: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
 
             validate: {
-                len: [1, 255]
+                len: [0, 255]
             }
         },
 
@@ -33,10 +33,21 @@ module.exports = function(sequelize, DataTypes) {
 
         },
 
+        product_image: {
+            type: DataTypes.STRING,
+            allowNull: true
+
+        },
+
         total_stock: {
             type: DataTypes.INTEGER,
             
         },
     })
+    Product.associate = function(models) {
+        Product.hasMany(models.Review, {
+          onDelete: "cascade"
+        });
+      };
     return Product;
 }
