@@ -26,7 +26,7 @@ Create Handlebars files
 
 Create AWS S3 Package
 
-Crate Different Handlebars Views
+Create Different Handlebars Views
 
 Create Models for What Will be Stored in Database
 
