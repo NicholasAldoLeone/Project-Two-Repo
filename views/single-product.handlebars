@@ -16,9 +16,9 @@
                 <p>{{products.product_name}}</p>
             </blockquote>
             <p> {{products.product_cost}}
-                <br/> {{products.product_department}}
-                <br/> {{products.total_stock}}
-                <br/> {{products.product_description}}</p>
+                <br /> {{products.product_department}}
+                <br /> {{products.total_stock}}
+                <br /> {{products.product_description}}</p>
         </div>
     </div>
 </div>
@@ -31,24 +31,28 @@
                     Comment panel
                 </div>
                 <div class="panel-body">
-                    <textarea class="form-control" placeholder="write a review..." rows="3" id = "review-text"></textarea>
+                    <textarea class="form-control" placeholder="write a review..." rows="3" id="review-text"></textarea>
                     <br>
-                    <button type="button" class="btn btn-info pull-right" id = "post-btn" value = {{products.id}}>Post</button>
+                    <button type="button" class="btn btn-info pull-right" id="post-btn"
+                        value={{products.id}}>Post</button>
                     <div class="clearfix"></div>
                     <hr>
                     <ul class="media-list">
+                        {{#each reviews}}
                         <li class="media">
                             <div class="media-body">
                                 <span class="text-muted pull-right">
-                                    <small class="text-muted">{{data.comment.created_on}}</small>
+                                    <small class="text-muted">{{created_on}}</small>
                                 </span>
-                                <strong class="text-success">{{data.comment.user}}</strong>
+                                <strong class="text-success">{{title}}</strong>
                                 <p>
-                                {{data.comment.comment_text}}
+                                    {{body}}
                                 </p>
                             </div>
                         </li>
+                        {{/each}}
                     </ul>
+
                 </div>
             </div>
         </div>
