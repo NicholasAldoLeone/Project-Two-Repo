@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     $("#file").on("change", function () {
         readURL(this);
