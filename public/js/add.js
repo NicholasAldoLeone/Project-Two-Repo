@@ -33,14 +33,30 @@ $(document).ready(function () {
             contentType: false,
             processData: false
         }).then(function (res) {
-            var newProduct = {
-                name: fd.get("name"),
-                department: fd.get("department"),
-                cost: fd.get("cost"),
-                description: fd.get("description"),
-                image: res.imageUrl
+            // var newProduct = {
+            //     name: fd.get("name"),
+            //     department: fd.get("department"),
+            //     cost: fd.get("cost"),
+            //     description: fd.get("description"),
+            //     image: res.imageUrl
 
-            }
         });
     });
+
+    $(document).on("click", "#post-btn", function(){
+        var review  = {
+            title: "user",
+            body: $("#review-text").val(),
+            ProductId: $(this).val()
+            
+        }
+
+        $.ajax({
+            url: "/api/review",
+            type: "post",
+            data: review,
+        }).then(function(){
+            console.log("review added");
+        })
+    })
 });

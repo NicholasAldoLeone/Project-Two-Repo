@@ -19,12 +19,14 @@ module.exports = function(sequelize, DataTypes) {
 
             }
         },
-
-        review_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-
-        }
     })
+
+    Review.associates = function(models) {
+        Review.belongsTo(models.Product, {
+            foreignKey: {
+                allowNull: false
+            }
+        })
+    }
     return Review
 }
