@@ -1,33 +1,37 @@
-const router = require("express").Router();
 const upload = require('../services/file-upload');
+
+var express = require("express");
+var router = express.Router();
+
+
 
 const singleUpload = upload.single('file');
 var db = require("../models");
 
 module.exports = function (app) {
-    app.get("/api/products", function (request, response) {
+    app.get("/api/products", function (req, res) {
         db.Product.findAll({}).then(function (data) {
-            response.json(data)
+            res.json(data)
 
         })
     })
 
-    app.get("/api/products/:product", function (request, response) {
+    app.get("/api/products/:id", function (req, resp) {
         db.Product.findAll({
             where: {
-                product_name: request.params.product
+                id: req.params.id
 
             }
         }).then(function (data) {
-            response.json(data);
+            res.json(data);
         })
     })
 
-    app.get("/api/categories/:category", function (request, response) {
+    app.get("/api/categories/:category", function (req, res) {
 
     })
 
-    app.get("/api/price/:maxprice", function (request, response) {
+    app.get("/api/price/:maxprice", function (req, res) {
 
     })
 
@@ -50,5 +54,16 @@ module.exports = function (app) {
             }
         });
     });
+
+    app.put("/api/update", function(req, res){
+        console.log(req.body);
+        db.Product.update(req.body, {
+            where: {
+                id: req.body.id
+            }
+        }).then(function(data){
+            res.json(data);
+        })
+    })
 }
 

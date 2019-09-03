@@ -8,6 +8,10 @@
                 <input type="text" class="form-control" id="product_name" placeholder="Enter Products Name">
             </div>
             <div class="form-group col-md-4">
+                <label for="product_department">Product Department</label>
+                <input type="text" class="form-control" id="product_department" placeholder="Enter Products Department">
+            </div>
+            <div class="form-group col-md-4">
                 <label for="product_cost">Product Price</label>
                 <input type="number" class="form-control" id="product_cost" placeholder="Enter Cost Per product">
             </div>
@@ -51,8 +55,53 @@
             <td>{{product_department}}</td>
             <td>${{product_cost}}</td>
             <td>{{total_stock}}</td>
+            <td>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{id}}exampleModal"
+                    data-whatever="@getbootstrap" value = {{id}}>Update</button>
+
+                <div class="modal fade" id="{{id}}exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Update Product</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="{{id}}product-name" class="col-form-label">Product Name:</label>
+                                        <input type="text" class="form-control" id="{{id}}product-name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="{{id}}product-department" class="col-form-label">Product Department:</label>
+                                        <input type="text" class="form-control" id="{{id}}product-department">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="{{id}}product-price" class="col-form-label">Product Price:</label>
+                                        <input type="text" class="form-control" id="{{id}}product-price">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="{{id}}total-stock" class="col-form-label">Product Stock:</label>
+                                        <input type="text" class="form-control" id="{{id}}total-stock">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="{{id}}description" class="col-form-label">Description:</label>
+                                        <textarea class="form-control" id="{{id}}description"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" data-dismiss = "modal" id = "update-btn" value = {{id}}>Apply</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
         </tr>
         {{/each}}
     </tbody>
 </table>
-

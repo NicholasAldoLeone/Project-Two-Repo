@@ -2,13 +2,19 @@ var express = require("express");
 var router = express.Router();
 var db = require("../models");
 
-router.get("/", function (request, response) {
-    response.render("admin-all-products")
+router.get("/", function (req, res) {
+    res.render("index")
 })
 
-router.get("/html/products", function (request, response) {
+router.get("/admin", function (req, res) {
     db.Product.findAll({}).then(function (data) {
-        response.render("admin-all-products", {products:data});
+        res.render("admin-all-products", {products:data});
+    })
+})
+
+router.get("/allproducts", function(req, res){
+    db.Product.findAll({}).then(function(data){
+        res.render("user-all-products", {products:data});
     })
 })
 
