@@ -24,6 +24,9 @@
             <td>{{product_department}}</td>
             <td>{{product_cost}}</td>
             <td>{{total_stock}}</td>
+            <td>
+                <a type="button" class="btn btn-primary" href = "/api/products/{{id}}" id = "view-btn">View</a>
+            </td>
         </tr>
         {{/each}}
     </tbody>
