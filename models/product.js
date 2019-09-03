@@ -44,5 +44,10 @@ module.exports = function(sequelize, DataTypes) {
             
         },
     })
+    Product.associate = function(models) {
+        Product.hasMany(models.Review, {
+          onDelete: "cascade"
+        });
+      };
     return Product;
 }

@@ -10,11 +10,11 @@ var PORT = process.env.PORT || 8080;
 
 var db = require("./models");
 
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
-app.use(express.static("public"));
 app.use(require("./routes"));
 
 // We need to use sessions to keep track of our user's login status
