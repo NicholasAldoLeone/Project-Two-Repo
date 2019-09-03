@@ -1,4 +1,4 @@
-# Prime Product (Project Two)
+# Prime Purchase (Project Two)
 
 # Team Members
 

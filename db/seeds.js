@@ -1,7 +1,6 @@
 const db = require("../models");
 
 db.sequelize.sync({ force: true }).then(function() {
-  db.Product.create({}).then(function() {
     db.Product.create({
       product_name: "Baseball Bat",
       product_department: "Sporting Goods",
@@ -163,4 +162,3 @@ db.sequelize.sync({ force: true }).then(function() {
       product_description: "A convinient way of heating up your meals if you're pressed for time."
     });
   });
-});
