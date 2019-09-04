@@ -41,7 +41,7 @@ $(document).ready(function () {
                 product_cost: fd.get("cost"),
                 total_stock: fd.get("stock"),
                 product_description: fd.get("description"),
-                product_image: res.location
+                product_image: res.file
             }
             location.reload();
         });
