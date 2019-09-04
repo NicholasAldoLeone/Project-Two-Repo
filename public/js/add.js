@@ -32,13 +32,7 @@ $(document).ready(function () {
             data: fd,
             contentType: false,
             processData: false
-        }).then(function (res) {
-            // var newProduct = {
-            //     name: fd.get("name"),
-            //     department: fd.get("department"),
-            //     cost: fd.get("cost"),
-            //     description: fd.get("description"),
-            //     image: res.imageUrl
+        }).then(function(res) {
 
         });
     });

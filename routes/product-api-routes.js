@@ -19,17 +19,8 @@ module.exports = function (app) {
 
             include: [db.Review]
         }).then(function (data) {
-            console.log(data[0].Reviews);
             res.render("single-product", {products: data[0], reviews: data[0].Reviews})
         })
-    })
-
-    app.get("/api/categories/:category", function (req, res) {
-
-    })
-
-    app.get("/api/price/:maxprice", function (req, res) {
-
     })
 
     app.post("/product", function (req, res) {
