@@ -1,2 +1,3 @@
-CREATE DATABASE "Prime_Purchase_db";
-USE "Prime_Purchase_db";
+CREATE DATABASE Prime_Purchase_db;
+
+USE Prime_Purchase_db;
