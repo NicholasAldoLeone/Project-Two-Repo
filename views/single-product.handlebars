@@ -1,8 +1,12 @@
 <div class="jumbotron jumbotron-fluid jumbotron-attr">
     <div class="container">
-        <h1 class="display-4">Prime Purchase</h1>
+              <img class="prime-logo" src="/images/logo/new-prime-logo.png" alt="Prime Products logo">
+
         <p class="lead">Please Review {{products.product_name}} Below!</p>
     </div>
+     <div class="col-md-3 return-btns">
+                <a type="button" class="btn btn-primary product-button" href="/homepage" id="view-btn">Return to Homeage</a>
+            </div>
 </div>
 <br>
 <br>
@@ -10,8 +14,8 @@
     <div class="row">
         <div class="col-md-12">
 
-            <div class="card" style="width: 100%;">
-                <img src="{{products.product_image}}" id = "product-image" class="card-img-top" alt="product image" style = "width: 300px; height: 300px; margin: 0 auto;">
+            <div class="card product-card" style="width: 100%;">
+                <img src="{{products.product_image}}" id = "product-image" class="card-img-top" alt="product image" style = "width: 300px; height: 300px; margin: 0 auto; border-style: solid; border-width: 1px; border-color: black;">
                 <div class="card-body">
                     <h5 class="card-title">{{products.product_name}}</h5>
                     <p class="card-text">{{products.product_description}}</p>
@@ -22,7 +26,7 @@
                     <li class="list-group-item">Available Stock: {{products.total_stock}}</li>
                 </ul>
                 <div class="card-body">
-                    <a class="btn btn-primary" href="/allproducts" role="button">Return To Inventory</a>
+                    <a class="btn btn-primary product-button" href="/allproducts" role="button">Return To Inventory</a>
                 </div>
                 <div class="row bootstrap snippets">
                     <div class="col-md-8 offset-md-2">
@@ -52,8 +56,10 @@
                                                 </p>
                                             </div>
                                         </li>
+                                        <hr>
                                         {{/each}}
                                     </ul>
+                                    
 
                                 </div>
                             </div>
