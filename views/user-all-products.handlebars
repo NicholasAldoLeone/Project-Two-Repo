@@ -2,6 +2,22 @@
     <div class="container">
        <img class="prime-logo" src="/images/logo/new-prime-logo.png" alt="Prim Products logo">
         <p class="lead">Please find all of our Preeminent Products Below!</p>
+        <div class="row">
+            <div class="col-md-3">
+                <a type="button" class="btn btn-primary" href="/homepage" id="view-btn">Return to Homeage</a>
+                <a type="button" class="btn btn-primary" href="/allproducts" role="button">View All</a>
+            </div>
+            <div class="col-md-3">
+                <input class="form-control" type="text" placeholder="Name:" id="name-search"> <button
+                    class="btn btn-primary" id="name-btn">Search By Name</button>
+
+            </div>
+            <div class="col-md-3">
+                <input class="form-control" type="text" placeholder="Category:" id="category-search"> <button
+                    class="btn btn-primary" id="category-btn">Search By Category</button>
+
+            </div>
+        </div>
     </div>
 </div>
 <br>
@@ -14,6 +30,7 @@
             <th scope="col">Department</th>
             <th scope="col">Product Price</th>
             <th scope="col">Amount in Stock</th>
+            <th scope="col"> </th>
         </tr>
     </thead>
     <tbody>
@@ -25,7 +42,7 @@
             <td>{{product_cost}}</td>
             <td>{{total_stock}}</td>
             <td>
-                <a type="button" class="btn btn-primary" href = "/api/products/{{id}}" id = "view-btn">View</a>
+                <a type="button" class="btn btn-primary" href="/api/products/{{id}}" id="view-btn">View</a>
             </td>
         </tr>
         {{/each}}

@@ -86,7 +86,7 @@ db.sequelize.sync({ force: true }).then(function() {
       product_department: "Electronics",
       product_cost: 1200,
       total_stock: 10,
-      product_image: "/images/product_images/sony_tv.jpeg",
+      product_image: "/images/product_images/song_tv.jpeg",
       product_description: "This is a fine Television, I just couldn't find the equivalent Samsung Model."
     });
     db.Product.create({

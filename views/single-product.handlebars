@@ -8,54 +8,58 @@
 <br>
 <div class="container">
     <div class="row">
-        <div class="col-sm-2 col-md-2">
-            <img src="{{products.product_image}}" alt="" class="img-rounded img-responsive" />
-        </div>
-        <div class="col-sm-4 col-md-4">
-            <blockquote>
-                <p>{{products.product_name}}</p>
-            </blockquote>
-            <p> {{products.product_cost}}
-                <br /> {{products.product_department}}
-                <br /> {{products.total_stock}}
-                <br /> {{products.product_description}}</p>
-        </div>
-    </div>
-</div>
+        <div class="col-md-12">
 
-<div class="row bootstrap snippets">
-    <div class="col-md-6 col-md-offset-2 col-sm-12">
-        <div class="comment-wrapper">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    Comment panel
+            <div class="card" style="width: 100%;">
+                <img src="{{products.product_image}}" id = "product-image" class="card-img-top" alt="product image" style = "width: 300px; height: 300px; margin: 0 auto;">
+                <div class="card-body">
+                    <h5 class="card-title">{{products.product_name}}</h5>
+                    <p class="card-text">{{products.product_description}}</p>
                 </div>
-                <div class="panel-body">
-                    <textarea class="form-control" placeholder="write a review..." rows="3" id="review-text"></textarea>
-                    <br>
-                    <button type="button" class="btn btn-info pull-right" id="post-btn"
-                        value={{products.id}}>Post</button>
-                    <div class="clearfix"></div>
-                    <hr>
-                    <ul class="media-list">
-                        {{#each reviews}}
-                        <li class="media">
-                            <div class="media-body">
-                                <span class="text-muted pull-right">
-                                    <small class="text-muted">{{created_on}}</small>
-                                </span>
-                                <strong class="text-success">{{title}}</strong>
-                                <p>
-                                    {{body}}
-                                </p>
-                            </div>
-                        </li>
-                        {{/each}}
-                    </ul>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Department: {{products.product_department}}</li>
+                    <li class="list-group-item">Price: {{products.product_cost}}</li>
+                    <li class="list-group-item">Available Stock: {{products.total_stock}}</li>
+                </ul>
+                <div class="card-body">
+                    <a class="btn btn-primary" href="/allproducts" role="button">Return To Inventory</a>
+                </div>
+                <div class="row bootstrap snippets">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="comment-wrapper">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    Comment panel
+                                </div>
+                                <div class="panel-body">
+                                    <textarea class="form-control" placeholder="write a review..." rows="3"
+                                        id="review-text"></textarea>
+                                    <br>
+                                    <button type="button" class="btn btn-info pull-right" id="post-btn"
+                                        value={{products.id}}>Post</button>
+                                    <div class="clearfix"></div>
+                                    <hr>
+                                    <ul class="media-list">
+                                        {{#each reviews}}
+                                        <li class="media">
+                                            <div class="media-body">
+                                                <span class="text-muted pull-right">
+                                                    <small class="text-muted">{{created_on}}</small>
+                                                </span>
+                                                <strong class="text-success">{{title}}</strong>
+                                                <p>
+                                                    {{body}}
+                                                </p>
+                                            </div>
+                                        </li>
+                                        {{/each}}
+                                    </ul>
 
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
-
-    </div>
-</div>
