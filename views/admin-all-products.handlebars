@@ -1,8 +1,15 @@
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid jumbotron-attr">
     <div class="container">
-        <h1 class="display-4">Prime Purchase (Administrator)</h1>
+       <img class="prime-logo" src="/images/logo/new-prime-logo.png" alt="Prime Products logo">
+       <h3 class="">Administrator</h3>
         <p class="lead">Please Update or Add Products Below</p>
-        <form>
+       
+    </div>
+</div>
+<div class="container">
+
+ <div class="new-product-form">
+        <form class="form-sheet">
             <div class="form-group col-md-4">
                 <label for="product_name">Product Name</label>
                 <input type="text" class="form-control" id="product_name" placeholder="Enter Products Name">
@@ -31,10 +38,10 @@
                 <label for="product_description">Description</label>
                 <textarea class="form-control" id="product_description" rows="3"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" id="add-product">Add product</button>
-            <button type="submit" class="btn btn-primary" id="update-product">Update product(s)</button>
+            <button type="submit" class="btn btn-primary product-button" id="add-product">Add product</button>
+            <button type="submit" class="btn btn-primary product-button" id="update-product">Update product(s)</button>
         </form>
-    </div>
+         </div>
 </div>
 
 <table class="table table-striped">
