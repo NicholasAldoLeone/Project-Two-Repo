@@ -32,6 +32,17 @@ router.get("/api/categories/:category", function (req, res) {
         res.render("user-all-products", {products: data});
     })
 })
+
+router.get("/api/names/:name", function(req, res){
+  db.Product.findAll({
+    where: {
+      product_name: req.params.name
+    }
+  }).then(function(data){
+    res.render("user-all-products", {products: data});
+  })
+})
+
 router.get("/sign-up", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {

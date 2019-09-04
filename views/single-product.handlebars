@@ -9,7 +9,6 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-
             <div class="card" style="width: 100%;">
                 <img src="{{products.product_image}}" id = "product-image" class="card-img-top" alt="product image" style = "width: 300px; height: 300px; margin: 0 auto;">
                 <div class="card-body">
@@ -23,6 +22,7 @@
                 </ul>
                 <div class="card-body">
                     <a class="btn btn-primary" href="/allproducts" role="button">Return To Inventory</a>
+                    <a class="btn btn-primary" href="/api/categories/{{products.product_department}}" role="button">Return To Searched</a>
                 </div>
                 <div class="row bootstrap snippets">
                     <div class="col-md-8 offset-md-2">
