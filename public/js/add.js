@@ -24,7 +24,7 @@ $(document).ready(function () {
         fd.append("cost", $("#product_cost").val())
         fd.append("stock", $("#total_stock").val())
         fd.append("description", $("#product_description").val().trim())
-        console.log(fd);
+        // console.log(fd);
 
 
         $.ajax({
@@ -34,13 +34,14 @@ $(document).ready(function () {
             contentType: false,
             processData: false
         }).then(function(res) {
+            console.log(res);
             var newProduct = {
                 product_name: fd.get("name"),
                 product_department: fd.get("department"),
                 product_cost: fd.get("cost"),
                 total_stock: fd.get("stock"),
                 product_description: fd.get("description"),
-                product_image: res.file
+                product_image: res.location
             }
             location.reload();
         });
