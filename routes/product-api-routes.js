@@ -19,7 +19,6 @@ module.exports = function (app) {
 
             include: [db.Review]
         }).then(function (data) {
-            console.log(data[0].Reviews);
             res.render("single-product", {products: data[0], reviews: data[0].Reviews})
         })
     })

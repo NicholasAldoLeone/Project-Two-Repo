@@ -7,10 +7,9 @@ $(document).ready(function(){
         console.log(object);
         $.ajax({
             url: "/api/categories/" + object.category,
-            type: "get",
-            data: object
+            method: "GET"
         }).then(function(){
-           
+           window.location.href = "/api/categories/" + object.category;
         })
     })
 })

@@ -13,6 +13,10 @@ router.get("/admin", function (req, res) {
     })
 })
 
+router.get("/homepage", function(req, res){
+  res.render("index")
+})
+
 router.get("/allproducts", function(req, res){
     db.Product.findAll({}).then(function(data){
         res.render("user-all-products", {products:data});
@@ -20,7 +24,6 @@ router.get("/allproducts", function(req, res){
 })
 
 router.get("/api/categories/:category", function (req, res) {
-    console.log(req.body);
     db.Product.findAll({
         where: {
             product_department: req.params.category
