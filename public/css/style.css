@@ -1,0 +1,41 @@
+body {
+    
+    background-color: rgb(139, 213, 238);
+}
+
+.jumbotron-attr {
+    
+    /* border-left: 5px; */
+    background-color: rgb(106, 117, 124);
+
+}
+
+.new-product-form {
+    background-color: rgb(119, 128, 133);
+    width: 850px;
+   
+    
+}
+
+.prime-logo {
+    /* width: 300px; */
+    padding: 0;
+    width: 400px;
+}
+
+.welcome-col {
+   
+   
+    padding-left: 70px;
+    border: 2px;
+
+}
+
+.product-button {
+    background-color: rgb(106, 117, 124);
+    color:  black;
+}
+h3, p {
+    padding-left: 20px;
+
+}
