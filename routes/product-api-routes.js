@@ -34,6 +34,7 @@ module.exports = function (app) {
                     product_name: req.body.name,
                     product_department: req.body.department,
                     product_cost: req.body.cost,
+                    total_stock: req.body.stock,
                     product_description: req.body.description,
                     product_image: req.file.location
                 }).then(function(data){
