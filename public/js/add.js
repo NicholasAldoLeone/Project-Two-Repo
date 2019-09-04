@@ -50,7 +50,7 @@ $(document).ready(function () {
             type: "post",
             data: review,
         }).then(function(){
-            console.log("review added");
+            location.reload();
         })
     })
 });
