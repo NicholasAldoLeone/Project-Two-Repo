@@ -24,14 +24,6 @@ module.exports = function (app) {
         })
     })
 
-    app.get("/api/categories/:category", function (req, res) {
-
-    })
-
-    app.get("/api/price/:maxprice", function (req, res) {
-
-    })
-
     app.post("/product", function (req, res) {
         singleUpload(req, res, function (err) {
             if(err){

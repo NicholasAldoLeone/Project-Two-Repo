@@ -18,4 +18,15 @@ router.get("/allproducts", function(req, res){
     })
 })
 
+router.get("/api/categories/:category", function (req, res) {
+    console.log(req.body);
+    db.Product.findAll({
+        where: {
+            product_department: req.params.category
+        }
+    }).then(function(data){
+        res.render("user-all-products", {products: data});
+    })
+})
+
 module.exports = router;
